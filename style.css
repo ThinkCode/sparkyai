@@ -1,0 +1,22 @@
+:root { --accent: #A6CFF0; --bg: #ffffff; --fg: #111318; --muted: #5b6270; --card: #f4f5f7; --line: #e3e5ea; }
+@media (prefers-color-scheme: dark) { :root { --bg: #0b0c10; --fg: #f2f3f5; --muted: #a0a6b2; --card: #16181d; --line: #262931; } }
+* { box-sizing: border-box; }
+body { margin: 0; font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--fg); }
+a { color: var(--accent); text-decoration: none; } a:hover { text-decoration: underline; }
+.bar { display: flex; align-items: center; justify-content: space-between; max-width: 960px; margin: 0 auto; padding: 18px 20px; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--fg); font-weight: 650; } .brand img { border-radius: 7px; }
+nav a { margin-left: 18px; color: var(--muted); font-weight: 500; } nav a[aria-current] { color: var(--fg); }
+main { max-width: 960px; margin: 0 auto; padding: 0 20px 64px; }
+.hero { text-align: center; padding: 56px 0 40px; }
+.hero img { width: 112px; height: 112px; border-radius: 25px; box-shadow: 0 12px 40px color-mix(in srgb, var(--accent) 35%, transparent); }
+.hero h1 { font-size: clamp(32px, 6vw, 52px); line-height: 1.1; margin: 22px 0 10px; letter-spacing: -0.02em; }
+.hero p { color: var(--muted); font-size: 20px; max-width: 620px; margin: 0 auto; }
+.cta { display: inline-block; margin-top: 26px; padding: 12px 24px; border-radius: 999px; background: var(--accent); color: #fff; font-weight: 600; }
+.shots { display: flex; gap: 18px; overflow-x: auto; padding: 8px 4px 20px; margin: 8px 0 16px; scroll-snap-type: x mandatory; }
+.shots img { height: min(520px, 70vh); width: auto; border-radius: 22px; border: 1px solid var(--line); scroll-snap-align: center; flex: none; box-shadow: 0 10px 30px rgba(0,0,0,.12); }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 24px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 22px; }
+.card h3 { margin: 0 0 6px; font-size: 18px; } .card p { margin: 0; color: var(--muted); }
+.doc { max-width: 720px; margin: 24px auto 0; } .doc h1 { font-size: 36px; letter-spacing: -0.01em; margin-bottom: 4px; }
+.doc h2 { font-size: 20px; margin-top: 32px; } .doc .updated { color: var(--muted); }
+footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; text-align: center; padding: 24px 20px; }
